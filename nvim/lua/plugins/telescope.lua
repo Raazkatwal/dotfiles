@@ -15,6 +15,7 @@ return {
 						".git/.*",
 						".agents/.*",
 						".codex/.*",
+						".claude/.*",
 						".idea/.*",
 						".vscode/.*",
 						"bootstrap/cache/.*",
