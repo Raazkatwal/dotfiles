@@ -1,3 +1,4 @@
+return {}
 -- return {
 -- 	"ricardoramirezr/blade-nav.nvim",
 -- 	dependencies = {
