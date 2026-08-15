@@ -10,7 +10,7 @@ return {
 				defaults = {
 					file_ignore_patterns = {
 						"vendor/.*",
-						"_ide_helper.*",
+						-- "_ide_helper.*",
 						"node_modules/.*",
 						".git/.*",
 						".agents/.*",

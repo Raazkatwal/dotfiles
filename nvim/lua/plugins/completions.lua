@@ -31,12 +31,23 @@ return {
 		config = function()
 			local cmp = require("cmp")
 			local luasnip = require("luasnip")
+			local kind_icons = {
+				BladeNav = "",
+			}
 			require("luasnip.loaders.from_vscode").lazy_load()
 
 			cmp.setup({
 				snippet = {
 					expand = function(args)
 						luasnip.lsp_expand(args.body)
+					end,
+				},
+				formatting = {
+					format = function(entry, item)
+						if kind_icons[item.kind] then
+							item.kind = string.format("%s %s", kind_icons[item.kind], item.kind)
+						end
+						return item
 					end,
 				},
 				window = {
