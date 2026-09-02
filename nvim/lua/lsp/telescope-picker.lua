@@ -27,7 +27,7 @@ local function get_installed_lsp_names()
 	end
 
 	-- External LSPs
-	table.insert(lsp_names, "laravel_ls")
+	table.insert(lsp_names, "laravel_lsp")
 
 	table.sort(lsp_names)
 
@@ -155,7 +155,7 @@ local function lsp_stop_picker()
 				Actions.close(prompt_bufnr)
 				if selection then
 					local client = selection.value
-					client:stop() -- Future-proof: works now and in 0.13+
+					vim.lsp.enable(client.name, false)
 					print("Stopped LSP: " .. client.name)
 				end
 			end)

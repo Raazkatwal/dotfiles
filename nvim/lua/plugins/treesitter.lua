@@ -19,6 +19,7 @@ return {
 		vim.filetype.add({
 			pattern = {
 				[".*%.blade%.php"] = "blade",
+				[".*%.cshtml"] = "razor",
 			},
 		})
 	end,
