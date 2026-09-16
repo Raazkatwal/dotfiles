@@ -4,5 +4,6 @@ return {
 		"html",
 		"blade",
 		"php",
+		"razor",
 	},
 }

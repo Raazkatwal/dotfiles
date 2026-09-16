@@ -6,6 +6,7 @@ return {
 		"xml",
 		"php",
 		"blade",
+		"razor",
 		"eruby",
 		"css",
 		"scss",
@@ -18,6 +19,7 @@ return {
 		userLanguages = {
 			php = "html",
 			blade = "html",
+			razor = "html",
 		},
 	},
 }
