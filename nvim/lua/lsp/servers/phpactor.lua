@@ -1,7 +1,11 @@
 return {
 	autostart = false,
 	workspace_required = false,
-	-- filetypes = { "php", "blade" },
+	filetypes = {
+		"php",
+		-- "blade",
+	},
+	cmd = { vim.fn.stdpath("data") .. "/mason/bin/phpactor", "language-server" },
 	-- root_dir = function(fname)
 	--   local util = require("lspconfig.util")
 	--   return util.root_pattern("composer.json")(fname)
