@@ -10,6 +10,38 @@ return {
 	config = function()
 		vim.opt.rtp:prepend(vim.fn.stdpath("data") .. "/lazy/nvim-treesitter/runtime")
 
+		require("nvim-treesitter").install({
+			"lua",
+			"html",
+			"css",
+			"javascript",
+			"typescript",
+			"php",
+			"vue",
+			"json",
+			"bash",
+			"markdown",
+			"blade",
+			"razor",
+			"python",
+			"ruby",
+			"go",
+			"rust",
+			"c",
+			"cpp",
+			"java",
+			"c_sharp",
+			"sql",
+			"yaml",
+			"toml",
+			"xml",
+			"dockerfile",
+			"gitcommit",
+			"diff",
+			"cmake",
+			"make",
+		})
+
 		vim.filetype.add({
 			pattern = {
 				[".*%.blade%.php"] = "blade",
@@ -38,7 +70,7 @@ return {
 				"c",
 				"cpp",
 				"java",
-				"csharp",
+				"cs",
 				"sql",
 				"yaml",
 				"toml",
