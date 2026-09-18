@@ -175,5 +175,5 @@ end, { desc = "Toggle between PHP and Blade filetypes" })
 ----------------------------------------------------------------------
 ----- Undo Tree
 -------------------------------------------------------------------------
-vim.cmd("packadd nvim.undotree")
-vim.keymap.set("n", "<leader>u", require("undotree").open)
+-- vim.cmd("packadd nvim.undotree")
+-- vim.keymap.set("n", "<leader>u", require("undotree").open)

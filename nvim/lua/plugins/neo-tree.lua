@@ -1,15 +1,16 @@
 return {
 	"nvim-neo-tree/neo-tree.nvim",
 	branch = "v3.x",
+
+	cmd = "Neotree",
+
 	dependencies = {
 		"nvim-lua/plenary.nvim",
 		"muniftanjim/nui.nvim",
 		"nvim-tree/nvim-web-devicons",
 	},
-	lazy = false,
-	config = function()
-		vim.keymap.set("n", "<leader>fe", ":Neotree toggle<cr>", { noremap = true, silent = true })
 
+	config = function()
 		local devicons = require("nvim-web-devicons")
 
 		devicons.set_icon({
@@ -37,7 +38,13 @@ return {
 			},
 		})
 
-		vim.keymap.set("n", "<leader>be", ":Neotree buffers toggle right<CR>", {
+		vim.keymap.set("n", "<leader>fe", "<cmd>Neotree toggle<cr>", {
+			noremap = true,
+			silent = true,
+			desc = "NeoTree",
+		})
+
+		vim.keymap.set("n", "<leader>be", "<cmd>Neotree buffers toggle right<CR>", {
 			noremap = true,
 			silent = true,
 			desc = "NeoTree Buffers",
