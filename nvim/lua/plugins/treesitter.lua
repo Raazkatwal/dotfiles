@@ -46,6 +46,7 @@ return {
 			pattern = {
 				[".*%.blade%.php"] = "blade",
 				[".*%.cshtml"] = "razor",
+				["%.env%..*"] = "bash",
 			},
 		})
 
