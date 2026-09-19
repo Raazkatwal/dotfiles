@@ -43,10 +43,13 @@ return {
 		})
 
 		vim.filetype.add({
+			filename = {
+				[".env"] = "bash",
+			},
 			pattern = {
 				[".*%.blade%.php"] = "blade",
 				[".*%.cshtml"] = "razor",
-				["%.env%..*"] = "bash",
+				["%.env.*"] = "bash",
 			},
 		})
 
