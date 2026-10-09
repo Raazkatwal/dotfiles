@@ -60,6 +60,8 @@ return {
 				"css",
 				"javascript",
 				"typescript",
+				"javascriptreact",
+				"typescriptreact",
 				"php",
 				"vue",
 				"json",
@@ -90,57 +92,3 @@ return {
 		})
 	end,
 }
--- return {
--- 	"nvim-treesitter/nvim-treesitter",
--- 	lazy = false,
--- 	build = ":TSUpdate",
---
--- 	config = function()
--- 		-- Install the parsers you actually use.
--- 		require("nvim-treesitter").install({
--- 			"lua",
--- 			"html",
--- 			"css",
--- 			"javascript",
--- 			"typescript",
--- 			"php",
--- 			"vue",
--- 			"json",
--- 			"bash",
--- 			"markdown",
--- 		})
---
--- 		-- Enable Tree-sitter features.
--- 		vim.api.nvim_create_autocmd("FileType", {
--- 			pattern = {
--- 				"lua",
--- 				"html",
--- 				"css",
--- 				"javascript",
--- 				"typescript",
--- 				"php",
--- 				"vue",
--- 				"json",
--- 				"bash",
--- 				"markdown",
--- 				"blade",
--- 			},
---
--- 			callback = function()
--- 				-- Tree-sitter highlighting
--- 				vim.treesitter.start()
---
--- 				-- Tree-sitter indentation
--- 				vim.bo.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
--- 			end,
--- 		})
---
--- 		-- Tell Neovim: *.blade.php = blade
--- 		vim.filetype.add({
--- 			pattern = {
--- 				[".*%.blade%.php"] = "blade",
--- 				[".*%.cshtml"] = "razor",
--- 			},
--- 		})
--- 	end,
--- }

@@ -5,6 +5,13 @@ return {
 		cmd = "Telescope",
 		dependencies = {
 			"nvim-lua/plenary.nvim",
+			{
+				"nvim-telescope/telescope-ui-select.nvim",
+				event = "VeryLazy",
+				config = function()
+					require("telescope").load_extension("ui-select")
+				end,
+			},
 		},
 		config = function()
 			local telescope = require("telescope")
@@ -34,6 +41,12 @@ return {
 				pickers = {
 					find_files = {
 						hidden = true,
+					},
+				},
+
+				extensions = {
+					["ui-select"] = {
+						require("telescope.themes").get_dropdown({}),
 					},
 				},
 			})
@@ -237,21 +250,5 @@ return {
 				desc = "Line Diagnostics",
 			},
 		},
-	},
-
-	{
-		"nvim-telescope/telescope-ui-select.nvim",
-		lazy = true,
-		config = function()
-			require("telescope").setup({
-				extensions = {
-					["ui-select"] = {
-						require("telescope.themes").get_dropdown({}),
-					},
-				},
-			})
-
-			require("telescope").load_extension("ui-select")
-		end,
 	},
 }
