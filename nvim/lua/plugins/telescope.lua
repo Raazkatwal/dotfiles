@@ -99,6 +99,7 @@ return {
 							return not (
 								filename:match("_ide_helper")
 								or filename:match("ide_helper_models")
+								or filename:match("/%.nuxt/")
 							)
 						end,
 					})
@@ -120,6 +121,7 @@ return {
 							return not (
 								filename:match("_ide_helper")
 								or filename:match("ide_helper_models")
+								or filename:match("/%.nuxt/")
 							)
 						end,
 					})
@@ -173,6 +175,7 @@ return {
 							return not (
 								filename:match("_ide_helper")
 								or filename:match("ide_helper_models")
+								or filename:match("/%.nuxt/")
 							)
 						end,
 					})
@@ -194,6 +197,7 @@ return {
 							return not (
 								filename:match("_ide_helper")
 								or filename:match("ide_helper_models")
+								or filename:match("/%.nuxt/")
 							)
 						end,
 					})
